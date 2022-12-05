@@ -82,7 +82,7 @@ $rows = $db->query($sql);
                                 <a href="" class="btn btn-success">Edit</a>
                             </td>
                             <td>
-                                <a href="" class="btn btn-danger">Delete</a>
+                                <a href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
                             </td>
 
                         </tr>
