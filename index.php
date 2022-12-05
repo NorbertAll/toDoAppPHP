@@ -47,12 +47,12 @@ $rows = $db->query($sql);
                                 <h4 class="modal-title">Add Task</h4>
                             </div>
                             <div class="modal-body">
-                                <form action="">
+                                <form method="post" action="add.php">
                                     <div class="form-group">
                                         <label for="">Task name</label>
                                         <input type="text" required name="task" class="form-control">
                                     </div>
-                                    <input type="submit" name="send" value="send" class="btn btn-success">
+                                    <input type="submit" name="send" value="Add Task" class="btn btn-success">
                                 </form>
                             </div>
                             <div class="modal-footer">
@@ -72,18 +72,21 @@ $rows = $db->query($sql);
                         </tr>
                     </thead>
                     <tbody>
+                        <?php while ($row = $rows->fetch_assoc()) : ?>
                         <tr>
 
-                            <th scope="row">1</th>
-                            <td class="col-md-10">Mark</td>
+
+                            <th scope="row"><?php echo $row['id'] ?></th>
+                            <td class="col-md-10"><?php echo $row['name'] ?></td>
                             <td>
                                 <a href="" class="btn btn-success">Edit</a>
                             </td>
                             <td>
                                 <a href="" class="btn btn-danger">Delete</a>
                             </td>
-                        </tr>
 
+                        </tr>
+                        <?php endwhile; ?>
                     </tbody>
                 </table>
             </div>
