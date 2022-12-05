@@ -53,7 +53,7 @@ if (isset($_POST['send'])) {
                         <input type="text" required name="task" value="<?php echo $row['name']; ?>"
                             class="form-control">
                     </div>
-                    <input type="submit" name="send" value="Add Task" class="btn btn-success">
+                    <input type="submit" name="send" value="Update" class="btn btn-success">
                 </form>
 
             </div>
