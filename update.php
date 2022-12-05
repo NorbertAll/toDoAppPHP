@@ -2,7 +2,7 @@
 <html lang="en">
 <?php include 'db.php';
 
-$id = $_GET['id'];
+$id = (int)$_GET['id'];
 
 $sql = "SELECT * FROM tasks WHERE id='$id'";
 
@@ -10,7 +10,7 @@ $rows = $db->query($sql);
 
 $row = $rows->fetch_assoc();
 if (isset($_POST['send'])) {
-
+    $task = htmlspecialchars($_POST['task']);
     $sql2 = "UPDATE FROM tasks set name='$task'";
 
     $db->query($sql2);
