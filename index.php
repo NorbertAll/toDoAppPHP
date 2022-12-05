@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'db.php'; ?>
+<?php include 'db.php';
+
+$sql = "SELECT * FROM tasks";
+
+$rows = $db->query($sql);
+
+?>
+
 
 <head>
     <meta charset="UTF-8">
@@ -66,6 +73,7 @@
                     </thead>
                     <tbody>
                         <tr>
+
                             <th scope="row">1</th>
                             <td class="col-md-10">Mark</td>
                             <td>
