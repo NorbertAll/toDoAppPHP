@@ -39,7 +39,7 @@ $rows = $db->query($sql);
             <div class="col-md-10 col-md-offset-1">
                 <button type="button" data-target="#myModal" data-toggle="modal" class="btn btn-success btn-add">Add
                     Task</button>
-                <button type="button" class="btn btn-default pull-right btn-print">Print</button>
+                <button type="button" class="btn btn-default pull-right btn-print" onclick="print()">Print</button>
                 <hr><br>
 
 
@@ -71,7 +71,7 @@ $rows = $db->query($sql);
                     </div>
                 </div>
 
-                <table class="table">
+                <table class="table table-hover">
                     <thead>
                         <tr>
                             <th scope="col">No.</th>
